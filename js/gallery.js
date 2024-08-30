@@ -232,6 +232,5 @@ document.addEventListener("DOMContentLoaded", function () {
       throw new Error("Numer miesiąca musi być z zakresu 01-12");
     }
   }
-
   loadData();
 });
