@@ -59,7 +59,21 @@
     <section class="container my-5">
       <h2 class="text-center">Kontakt</h2>
       <p class="text-center">Damian Golec<br />Telefon: 663959779</p>
-      <form
+
+      <form action="https://formspree.io/f/mvgplynz" method="POST">
+        <label>
+          Your email:
+          <input type="email" name="email" />
+        </label>
+        <label>
+          Your message:
+          <textarea name="message"></textarea>
+        </label>
+        <!-- your other form fields go here -->
+        <button type="submit">Send</button>
+      </form>
+
+      <!-- <form
         id="contactForm"
         action="https://formspree.io/f/mvgplynz"
         method="POST"
@@ -100,11 +114,11 @@
           </label>
         </div>
         <button class="btn btn-primary" type="submit">Wyślij</button>
-      </form>
+      </form> -->
     </section>
 
     <footer class="bg-dark text-white text-center py-4">
-      <p>&copy; 2024 DAM-BRUK. Wszelkie prawa zastrzeżone. "</p>
+      <p>&copy; 2024 DAM-BRUK. Wszelkie prawa zastrzeżone.</p>
     </footer>
 
     <script
