@@ -60,7 +60,21 @@
       <h2 class="text-center">Kontakt</h2>
       <p class="text-center">Damian Golec<br />Telefon: 663959779</p>
 
-      <form action="https://formspree.io/f/mvgplynz" method="POST">
+      <form
+        id="contactForm"
+        action="https://formspree.io/f/mvgplynz"
+        method="POST"
+      >
+        <label for="name"
+          >Imię<br />
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            name="name"
+            required
+          />
+        </label>
         <label>
           Your email:
           <input type="email" name="email" />
@@ -70,7 +84,7 @@
           <textarea name="message"></textarea>
         </label>
         <!-- your other form fields go here -->
-        <button type="submit">Send</button>
+        <button class="btn btn-primary" type="submit">Wyślij</button>
       </form>
 
       <!-- <form
