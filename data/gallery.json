@@ -1,10 +1,10 @@
 {
   "2024": {
-    "07": ["project1.jpg", "project2.png"],
+    "07": ["project1.jpg", "project2.jpg"],
     "08": [
       "project1.jpg",
       "project2.jpg",
-      "project3.png",
+      "project3.jpg",
       "project4.jpg",
       "project5.jpg",
       "project6.jpg",
@@ -12,7 +12,9 @@
       "project8.jpg",
       "project9.jpg",
       "project10.jpg",
-      "project11.jpg"
+      "project11.jpg",
+      "project12.jpg",
+      "project13.jpg"
     ]
   }
 }

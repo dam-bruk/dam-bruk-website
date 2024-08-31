@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (data[year] && data[year][month]) {
       data[year][month].forEach((fileName) => {
         let img = document.createElement("img");
-        img.src = `images/${year}/${month}/${fileName}`;
+        img.src = `images/gallery/${year}/${month}/${fileName}`;
         img.alt = "Zdjęcie projektu";
         monthGallery.appendChild(img);
       });
@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
         viewMode = "years";
         generateYearList();
       }
-      monthDisplay.textContent = "";
+      monthDisplay.textContent = "Zdjęcia zostaną wyświetlone tutaj";
       monthGallery.innerHTML = "";
     };
     return button2;
