@@ -353,13 +353,6 @@ footer {
   color: #fff;
   text-align: center;
 }
-footer span a {
-  color: #1ea9dc;
-  text-decoration: none;
-}
-footer span a:hover {
-  text-decoration: underline;
-}
 
 @media (max-width: 1104px) {
   .about .about-content .left img {
