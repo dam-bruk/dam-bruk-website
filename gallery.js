@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let data = {};
   let currentYear = null;
-  let viewMode = "years"; // 'years', 'months', 'gallery'
+  let viewMode = "years";
 
   function loadData() {
     fetch("./data/gallery.json")
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function loadMonthGallery(year, month) {
     monthGallery.innerHTML = "";
-    monthDisplay.textContent = `${getMonthName(month)} ${year}`;
+    monthDisplay.textContent = `${getMonthNameMany(month)} ${year}`;
     if (data[year] && data[year][month]) {
       data[year][month].forEach((fileName) => {
         let img = document.createElement("img");
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const months = data[year];
     Object.keys(months).forEach((month) => {
       let button2 = document.createElement("a");
-      button2.textContent = getMonthName(month) + " " + year;
+      button2.textContent = getMonthNameMany(month) + " " + year;
       button2.onclick = () => {
         loadMonthGallery(year, month);
         viewMode = "gallery";
@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
     return button2;
   }
 
-  function getMonthName(monthNumber) {
+  function getMonthNameOneMonth(monthNumber) {
     const months = [
       "Styczeń",
       "Luty",
@@ -125,6 +125,14 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       throw new Error("Numer miesiąca musi być z zakresu 01-12");
     }
+  }
+
+  function getMonthNameMany(monthNumbers) {
+    let temporaryArray = [];
+    monthNumbers.split("-").forEach((x) => {
+      temporaryArray.push(getMonthNameOneMonth(x));
+    });
+    return temporaryArray.join("-");
   }
   loadData();
 });
